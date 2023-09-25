@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: rgba(8, 122, 8, 0.696);
+  overflow-x: hidden;
+}
+body .circle {
+  width: 300px;
+  border-radius: 50%;
+  height: 300px;
+  background-color: darkgray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+body button {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+body button:hover + .ball {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+body .ball {
+  background-image: url(../1546090478.svg);
+  background-position: center;
+  z-index: 100;
+  background-repeat: no-repeat;
+  border: 3px solid black;
+  background-size: cover;
+  background-origin: border-box;
+  width: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 300px;
+  -webkit-animation: ball 1s linear both infinite;
+          animation: ball 1s linear both infinite;
+}
+
+@-webkit-keyframes ball {
+  100% {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+  }
+  0% {
+    -webkit-transform: translateX(-900px);
+            transform: translateX(-900px);
+  }
+}
+
+@keyframes ball {
+  100% {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+  }
+  0% {
+    -webkit-transform: translateX(-900px);
+            transform: translateX(-900px);
+  }
+}
